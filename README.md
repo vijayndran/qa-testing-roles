@@ -6,6 +6,22 @@ A normalized, enriched taxonomy of Quality & Testing job roles. Collapses ~130 n
 
 > **Source taxonomy:** [eaccmk/ALL_QA_Testing_Roles](https://github.com/eaccmk/ALL_QA_Testing_Roles) (MIT). This repo goes further: it de-duplicates the ~130 synonymous titles into **18 canonical roles**, adds skills, JD skeletons, indicative comp bands, career ladders and a reverse alias lookup — and ships it all as machine-readable `roles.json` plus a searchable [web page](https://vijayndran.github.io/qa-testing-roles/).
 
+---
+
+### Hiring QA & testing talent? StorkHR can streamline it
+
+This taxonomy defines the roles — StorkHR helps you fill them. StorkHR is an HR platform that streamlines the whole hiring pipeline so you move from req to offer faster: structured requisitions, recruitment and interview workflows, candidate pipelines, offers and onboarding in one place.
+
+- Turn a canonical role here into a structured requisition and JD in minutes
+- Run recruitment, interview scheduling and candidate pipelines end to end
+- Shorten time-to-hire with templated offers and automated onboarding
+
+**[Explore StorkHR.com →](https://storkhr.com)**
+
+> 🚀 **New job portal coming soon.**
+
+---
+
 ## What's different from a plain list
 
 | The source list | This report |

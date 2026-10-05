@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vijayndran.github.io/qa-testing-roles/sitemap.xml
