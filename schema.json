@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vijayndran.github.io/qa-testing-roles/schema.json",
+  "title": "QA & Testing Roles taxonomy",
+  "type": "object",
+  "required": ["meta", "ladders", "roles"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "required": ["title", "description", "source", "license", "specialties", "tiers", "compCurrency", "compNote"],
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "source": { "type": "string", "format": "uri" },
+        "license": { "type": "string" },
+        "asOf": { "type": "string", "description": "Month the comp bands were last calibrated, e.g. 2026-10" },
+        "specialties": { "type": "object", "additionalProperties": { "type": "string" }, "minProperties": 1 },
+        "tiers": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "compCurrency": { "type": "string" },
+        "compNote": { "type": "string" }
+      }
+    },
+    "ladders": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" },
+        "minItems": 2
+      }
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "positionTitle", "specialty", "tier", "summary", "requiredSkills", "preferredSkills", "compMin", "compMax", "aliases"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "positionTitle": { "type": "string", "minLength": 1 },
+          "specialty": { "type": "string" },
+          "tier": { "type": "string" },
+          "summary": { "type": "string", "minLength": 1, "description": "One-line JD skeleton: what the role does." },
+          "requiredSkills": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "preferredSkills": { "type": "array", "items": { "type": "string" } },
+          "compMin": { "type": "integer", "minimum": 0 },
+          "compMax": { "type": "integer", "minimum": 0 },
+          "aliases": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
